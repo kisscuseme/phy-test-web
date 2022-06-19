@@ -1,0 +1,378 @@
+@font-face {
+	font-family: 'Iropke_Batang';
+	src:url('../resources/iropkebatangm-webfont.woff2') format('woff2'),
+		url('../resources/iropkebatangm-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face{
+	font-family:"Font_Awesome_5_Free_Solid";
+	src:url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-solid-900.woff2') format("woff2"),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-solid-900.woff') format("woff"),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-solid-900.ttf') format("truetype"),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-solid-900.svg#fontawesome') format("svg");
+	font-style:normal;
+	font-weight:900;
+	font-display: block;
+}
+
+@font-face{
+	font-family:"Font_Awesome_5_Free_Regular";
+	src:url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-regular-400.woff2') format("woff2"),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-regular-400.woff') format("woff"),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-regular-400.ttf') format("truetype"),
+		url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-regular-400.svg#fontawesome') format("svg");
+	font-style:normal;
+	font-weight:400;
+	font-display: block;
+}
+
+html, button {
+    font-family: Bitter, 'Iropke_Batang';
+    font-size: 16px;
+}
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+input[type=radio]{
+    width: 0px;
+    visibility: hidden;
+}
+body {
+    margin: 0;
+    max-width: 767px;
+    height: 100vh;
+    overflow: hidden;
+}
+body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background: black;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.intro-wrap {
+    display: table;
+    position: relative;
+    width:100vw;
+    height:100vh;
+}
+.intro-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background:black;
+    opacity: 0.2;
+    z-index: -1;
+}
+.intro {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 20vh;
+}
+.intro-btn {
+    font-size: 1.6em;
+    font-weight: bold;
+    transition: all ;
+    animation: intro-ani 5s linear infinite;
+    cursor: pointer;
+}
+@keyframes intro-ani {
+    0% {
+        opacity: 1.0;
+        transform: scale(1.0);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1.0;
+        transform: scale(1.0);
+    }
+}
+.intro-story {
+    font-size: 2em;
+    font-weight: bold;
+    white-space: pre;
+}
+
+.title-wrap {
+    display: table;
+    position: relative;
+    width:100vw;
+    height:80px;
+}
+.title-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.title {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.question-wrap {
+    display: table;
+    position: relative;
+    width:100vw;
+    height:100px;
+}
+.question-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    opacity: 0.1;
+    z-index: -1;
+}
+.question {
+    display:table-cell;
+    vertical-align:middle;
+    padding-left: 20px;
+}
+.answer-wrap {
+    position: relative;
+    width:100vw;
+    height:100%;
+}
+.answer-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    opacity: 0.1;
+    z-index: -1;
+}
+.answer {
+    padding: 10px;
+    font-weight: bold;
+}
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.controller-wrap {
+    display: table;
+    position: relative;
+    width:100vw;
+    height:70px;
+}
+.prev-btn {
+    width:50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align:middle;
+    text-align:center;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.prev-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height:100%;
+    background:yellow;
+    opacity: 0.1;
+    z-index: -1;
+}
+.next-btn {
+    width:50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align:middle;
+    text-align:center;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.next-btn::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height:100%;
+    background:blue;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.result-wrap {
+    display: table;
+    position: relative;
+    width:100vw;
+    height:100vh;
+}
+.result-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background:blue;
+    opacity: 0.1;
+    z-index: -1;
+}
+.before-result {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    white-space: pre;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 20vh;
+}
+.result {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    white-space: pre;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 20vh;
+}
+.turn-back-wrap {
+    display: table;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 34px;
+    width: 80px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.turn-back-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background:blue;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 10px;
+}
+.turn-back {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.toast-wrap {
+    display: table;
+    position: fixed;
+    top: calc(50% - 25px);
+    left: calc(50% - 125px);
+    height: 50px;
+    width: 250px;
+    border-radius: 5%;
+}
+.toast-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background:black;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 10px;
+}
+.toast {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.link-wrap {
+    display: table;
+    position: fixed;
+    bottom: 22px;
+    left: 20px;
+    height: 30px;
+    width: 170px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.link-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background:red;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 10px;
+}
+.link {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 0.8125em;
+    text-decoration: none;
+    color: black;
+}
+.thunder {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: yellow;
+    opacity: 0.3;
+    display: none;
+}
+
+.unchecked::before {
+    content: "\f111";
+    font-family: Font_Awesome_5_Free_Regular;
+    padding-right: 10px;
+}
+
+.checked::before {
+    content: "\f4da";
+    font-family: Font_Awesome_5_Free_Solid;
+    padding-right: 10px;
+}
